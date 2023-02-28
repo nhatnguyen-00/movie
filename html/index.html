@@ -28,8 +28,21 @@
             <div class="header-logo">
                 <img src="../images/Background.png" alt="">
             </div>
+            <div class="header-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
             <div class="header-menu">
-                <ul>
+                <ul class="nav-menu">
+                    <div class="lang">
+                        <span>Language</span>
+                        <div class="logo-lang">
+                            <img src="../images/logo-lang-en.svg" alt="">
+                            <img src="../images/logo-lang-en.svg" alt="">
+                            <img src="../images/logo-lang-en.svg" alt="">
+                        </div>
+                    </div>
                     <li>ROMANCE</li>
                     <li>ROMANCE</li>
                     <li>ROMANCE</li>
@@ -40,11 +53,19 @@
                     <li>ROMANCE</li>
                 </ul>
                 <div class="header-search">
-                    <input type="text">
+                    <div class="search-toggle" id="mobile-search">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <input type="text" placeholder="SEARCH..." name="search">
                     <select name="">
-                        <option value="">Video</option>
-                        <option value="">Clip</option>
+                        <option value="">VIDEO</option>
+                        <option value="">CLIP</option>
                     </select>
+                </div>
+                <div class="icon-search">
+                    <img src="../images/circle2017.png" alt="">
                 </div>
                 <div class="header-lang">
                     <div class="header-lang__logo">
@@ -936,5 +957,6 @@
         }
     })
 </script>
+<script src="../js/header.js"></script>
 
 </html>
