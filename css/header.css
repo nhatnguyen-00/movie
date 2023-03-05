@@ -21,7 +21,7 @@
   height: 3px;
   margin: 5px auto;
   transition: all 0.3s ease-in-out;
-  background: white;
+  background: #A01522;
 }
 #header > .header-content > .header-menu {
   display: flex;
@@ -36,8 +36,8 @@
 }
 #header > .header-content > .header-menu > ul > li {
   font-size: 1.3rem;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 #header > .header-content > .header-menu .icon-search {
   display: none;
@@ -47,34 +47,62 @@
   position: relative;
   background-color: #303030;
   border-radius: 4px;
+  display: flex;
 }
 #header > .header-content > .header-menu > .header-search::before {
   content: " ";
   background-image: url("../images/circle2017.png");
   background-size: 100%;
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   position: absolute;
   top: 14px;
   left: 10px;
   z-index: 1000;
 }
-#header > .header-content > .header-menu > .header-search input {
-  display: inline-block;
-  outline: none;
-  background-color: #303030;
+#header > .header-content > .header-menu > .header-search .search {
+  width: calc(100% - 70px);
   height: 20px;
   font-size: 1.2rem;
   padding-left: 40px;
-  border-right: 1px solid #928F8F;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
-#header > .header-content > .header-menu > .header-search select {
+#header > .header-content > .header-menu > .header-search .search input {
+  height: 20px;
+  border-right: 1px solid #626262;
+}
+#header > .header-content > .header-menu > .header-search .select {
+  width: 70px;
+  height: 100%;
+  font-size: 1.2rem;
+  position: relative;
+  padding-left: 10px;
+}
+#header > .header-content > .header-menu > .header-search .select::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid white;
+}
+#header > .header-content > .header-menu > .header-search input, #header > .header-content > .header-menu > .header-search select {
   display: inline-block;
   outline: none;
   background-color: #303030;
-  height: 100%;
+  border: none;
+  font-weight: 400;
   font-size: 1.2rem;
+  color: white;
+  height: 100%;
+  width: 100%;
 }
 #header > .header-content > .header-menu > .header-lang {
   display: flex;
@@ -107,7 +135,7 @@
     margin: 0;
     width: 100%;
     position: absolute;
-    left: 100%;
+    right: 100%;
     opacity: 0;
     transition: all 0.5s ease;
     width: 100%;
@@ -116,7 +144,6 @@
   }
   #header .header-menu ul li {
     padding: 0 !important;
-    border-bottom: 1px solid #464646;
     position: relative;
     font-size: 2rem !important;
   }
@@ -129,6 +156,9 @@
     height: 15px;
     right: 16px;
     top: 45px;
+  }
+  #header .header-menu ul li:not(:last-child) {
+    border-bottom: 1px solid #464646;
   }
   #header .header-menu ul .lang {
     height: 50px;
@@ -149,7 +179,7 @@
   }
   #header .header-menu ul.active {
     background: #101010;
-    left: 0;
+    right: 0;
     opacity: 1;
     transition: all 0.5s ease;
   }
@@ -162,7 +192,7 @@
   }
   #header #mobile-menu {
     position: absolute;
-    top: 20px;
+    top: 25px;
     left: 3%;
     transform: translate(5%, 20%);
   }
@@ -189,17 +219,20 @@
     border-radius: 4px;
     padding: 7.5px;
   }
+  #header .icon-search img {
+    width: 100%;
+  }
   #header .header-search {
     border-radius: 0px !important;
     align-items: center;
     display: flex;
     flex-direction: row-reverse;
-    left: 0;
-    opacity: 1;
+    right: 100%;
+    opacity: 0;
     position: absolute !important;
     transition: all 0.5s ease;
     width: 100%;
-    z-index: -1;
+    z-index: 10;
     margin: 0;
     padding: 0 16px;
     flex-direction: row-reverse;
@@ -235,7 +268,8 @@
     transform: translateY(-8px) rotate(-45deg);
   }
   #header .header-search.active {
-    z-index: 10;
+    right: 0;
+    opacity: 1;
     transition: all 0.5s ease;
     height: 58px !important;
   }

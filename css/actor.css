@@ -1,0 +1,98 @@
+.actor-movie {
+  padding-bottom: 58px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.actor-movie .actor-desktop {
+  display: flex;
+}
+.actor-movie .actor-desktop .actor-img {
+  width: 180px;
+  margin-right: 40px;
+}
+.actor-movie .actor-desktop .actor-img img {
+  display: inline-block;
+  width: 180px;
+}
+.actor-movie .actor-desktop .actor-info {
+  padding: 17px 0;
+}
+.actor-movie .actor-desktop .actor-info .title {
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #797979;
+  line-height: 24px;
+}
+.actor-movie .actor-desktop .actor-info .name {
+  color: #FF9507;
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 60px;
+}
+.actor-movie .actor-desktop .actor-info .media {
+  display: none;
+}
+.actor-movie .actor-desktop .actor-info .profile .title-profile {
+  line-height: 34px;
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.actor-movie .actor-desktop .actor-info .profile .content-profile {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #928F8F;
+  line-height: 24px;
+}
+.actor-movie .actor-desktop .actor-info .profile .content-profile span {
+  color: #AF1815;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.actor-movie .actor-profile-mobile {
+  display: none;
+}
+
+.space {
+  height: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .actor-profile-mobile {
+    display: block !important;
+    margin-top: 20px;
+  }
+  .actor-profile-mobile .title {
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: white;
+  }
+  .actor-profile-mobile .content {
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: white;
+    line-height: 24px;
+  }
+  .actor-profile-mobile .content span {
+    color: #AF1815;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  .actor-info .profile {
+    display: none;
+  }
+  .actor-info .media {
+    display: block !important;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .actor-desktop .actor-img {
+    width: 160px !important;
+  }
+  .actor-desktop .actor-img img {
+    width: 160px !important;
+  }
+}
+
+/*# sourceMappingURL=actor.css.map */

@@ -1,0 +1,149 @@
+// style category head
+#body > .category {
+    display: flex;
+    max-width: 1484px;
+    margin: 0 auto;
+    vertical-align: middle;
+    margin: 0 20px;
+    margin-bottom: 25px;
+
+    img {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        margin-right: 8px;
+    }
+    
+    a {
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: rgba(255, 255, 255, 0.5);
+        margin-right: 5px;
+    }
+    .home {
+        color: #686868;
+    }
+}
+.body-movie {
+    margin-top: 0 !important;
+}
+.item-ad {
+    img {
+        width: 100%;
+    }
+}
+.count-item {
+    a {
+        color: #928F8F !important;
+        text-transform: lowercase !important;
+    }
+}
+
+.pagination-desktop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-pagination {
+    width: 40px;
+    height: 40px;
+    background: #797979;
+    border-radius: 8px;
+    margin: 0 8px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    a {
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: white;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    &.active {
+        background: linear-gradient(270deg, #A01522 0%, #881238 100%);
+    }
+}
+.pagination-mobile {
+    display: none;
+}
+
+.banner-ads-mobile {
+    display: none;
+}
+.ads {
+    margin: 20px;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .body-content {
+        background-color: transparent !important;
+        padding-top: 0 !important;
+    }
+    .pagination-mobile {
+        display: block;
+        .box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            cursor: pointer;
+
+            >div {
+                background: #797979;
+                border-radius: 8px;
+                margin: 0 8px;
+                text-align: center;
+                line-height: 40px;
+                height: 40px;
+                width: 150px;
+                a {
+                    width: 100%;
+                    height: 100%;
+                    font-size: 1.3rem;
+                    color: white;
+                    font-weight: bold;
+                }
+                img {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+            .prev img {
+                margin-right: 15px;
+            }
+            .next img {
+                margin-left: 15px;
+            }
+        }
+    }
+    .pagination-desktop {
+        display: none;
+ 
+        
+    }
+
+    .banner-ads-mobile {
+        display: block !important;
+        margin-bottom: 10px;
+        img {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+    .ads {
+        display: block !important;
+    }
+    .item-ad {
+        display: none;
+    }
+}
+

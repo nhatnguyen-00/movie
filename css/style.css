@@ -4,6 +4,24 @@
   padding: 0;
   box-sizing: border-box;
   font-size: 10px;
+  text-decoration: none;
+  list-style: none;
+  font-family: "alata", sans-serif;
+}
+
+@font-face {
+  font-family: "alata";
+  src: url("../fonts/Alata/alata-regular.ttf") format("tff");
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+
+ul {
+  list-style: none;
 }
 
 .body {
@@ -21,6 +39,10 @@
 
 .color-primary {
   color: #FFFFFF;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
